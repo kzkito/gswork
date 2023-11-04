@@ -5,7 +5,7 @@ const height = canvas.height;
 
 let x = width / 2; // Set the beginning at the center on the canvas
 let y = height / 2; 
-const stepSize = 20; // Size of one step
+let stepSize; // Size of one step will be set based on user input or default to 2
 
 ctx.fillStyle = 'black';
 
@@ -35,20 +35,20 @@ function arisanWalk() {
             x += stepSize; // Right
             break;
         case 4:
-            x += stepSize/Math.sqrt(stepSize);
-            y -= stepSize/Math.sqrt(stepSize);// Top-right
+            x += stepSize / Math.sqrt(2);
+            y -= stepSize / Math.sqrt(2); // Top-right
             break;
         case 5:
-            x += stepSize/Math.sqrt(stepSize); 
-            y += stepSize/Math.sqrt(stepSize);// Bottom-right
+            x += stepSize / Math.sqrt(2);
+            y += stepSize / Math.sqrt(2); // Bottom-right
             break;
         case 6:
-            x -= stepSize/Math.sqrt(stepSize); 
-            y += stepSize/Math.sqrt(stepSize);// Bottom-left
+            x -= stepSize / Math.sqrt(2);
+            y += stepSize / Math.sqrt(2); // Bottom-left
             break;
         case 7:
-            x -= stepSize/Math.sqrt(stepSize); 
-            y -= stepSize/Math.sqrt(stepSize);// Top-left
+            x -= stepSize / Math.sqrt(2);
+            y -= stepSize / Math.sqrt(2); // Top-left
             break;  
     }
 
@@ -64,5 +64,7 @@ document.getElementById('startButton').onclick = function() {
     ctx.clearRect(0, 0, width, height); // キャンバスをクリア
     x = width / 2; // xの位置をリセット
     y = height / 2; // yの位置をリセット
+    let userInput = document.getElementById('numberInput').value;
+    stepSize = userInput ? parseInt(userInput, 10) : 1; // stepSizeをユーザーの入力または2に設定
     arisanWalk(); // ありさんウォークを開始
 };
