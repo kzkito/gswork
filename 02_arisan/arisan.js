@@ -5,7 +5,7 @@ const height = canvas.height;
 
 let x = width / 2; // Set the beginning at the center on the canvas
 let y = height / 2; 
-const stepSize = 2; // Size of one step
+const stepSize = 20; // Size of one step
 
 ctx.fillStyle = 'black';
 
@@ -64,5 +64,5 @@ document.getElementById('startButton').onclick = function() {
     ctx.clearRect(0, 0, width, height); // キャンバスをクリア
     x = width / 2; // xの位置をリセット
     y = height / 2; // yの位置をリセット
-    arisanWalk(); // ランダムウォークを開始
+    arisanWalk(); // ありさんウォークを開始
 };
