@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Histograms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="hists">
+        <div id="uniHist">
+            <div id="histA">
+                <h2>一様乱数</h2>
+                <svg id="uniformHistogramA" width="500" height="400"></svg>
+            </div>
+            <div id="histB">
+                <h2>一様乱数</h2>
+                <svg id="uniformHistogramB" width="500" height="400"></svg>
+            </div>
+        </div>
+        <div id="normHist">
+            <div id="HistA">
+                <h2>正規乱数</h2>
+                <svg id="normalHistogramA" width="500" height="400"></svg>
+            </div>
+            <div id="HistB">
+                <h2>正規乱数</h2>
+                <svg id="normalHistogramB" width="500" height="400"></svg>
+            </div>
+        </div>
+    </div>
+    <button id="generate">乱数生成</button>
+    <button id="clearStorage">データ削除</button>
+
+    <div id="randomNumbers"></div>
+
+    <script src="./hist.js"></script>
+</body>
+</html>

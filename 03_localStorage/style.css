@@ -1,0 +1,8 @@
+#randomNumbers { height: 200px; overflow-y: scroll; }
+#randomNumbers div { font-size: 14px; }
+#uniHist {
+    display: flex;
+}
+#normHist {
+    display: flex;
+}
