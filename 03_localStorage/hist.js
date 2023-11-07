@@ -5,6 +5,8 @@ $('#generate').click(function() {
 
     $('#uniformHistogramA').empty();
     $('#uniformHistogramB').empty();
+        $('#normalHistogramA').empty();
+    $('#normalHistogramB').empty();
 
     // Arrays retrieved from localStorage or created as new arrays
     let randArrayA = JSON.parse(localStorage.getItem('A')) || [];
@@ -44,10 +46,6 @@ $('#generate').click(function() {
     drawNormHist(zArrayA, '#normalHistogramA');
     drawNormHist(zArrayB, '#normalHistogramB');  
 });
-
-// The drawUniHist and drawNormHist functions should be updated to correctly create and append the SVG element, setting the width and height on the SVG itself.
-
-
 
 function drawUniHist(data, drawingArea) {
     // SVGのサイズとマージンを定義
@@ -109,63 +107,64 @@ function drawUniHist(data, drawingArea) {
         .call(d3.axisLeft(y));
   }
 
-  function drawNormHist(data, selector) {
-    // SVGのサイズとマージンを定義
+  function drawNormHist(data, drawingArea) {
+    // Define the size and margins of the SVG
     const margin = { top: 10, right: 30, bottom: 30, left: 40 },
           width = 460 - margin.left - margin.right,
           height = 400 - margin.top - margin.bottom;
   
-    // X軸のスケールを定義（固定の範囲 -4 から 4）
+    // Define the scale for the x-axis (fixed range from -4 to 4)
     const x = d3.scaleLinear()
         .domain([-4, 4])
         .range([0, width]);
   
-    // ビンの設定
+    // Configure the bins
     const histogram = d3.histogram()
         .value(d => d)
         .domain(x.domain())
-        .thresholds(x.ticks(40)); // ビンの数を40に設定
+        .thresholds(x.ticks(40)); // Set the number of bins to 40
   
     const bins = histogram(data);
   
-    // Y軸のスケールを定義
+    // Define the scale for the y-axis
     const y = d3.scaleLinear()
         .range([height, 0])
-        .domain([0, d3.max(bins, d => d.length)]); // ビンの最大値に基づいてスケールを定義
+        .domain([0, d3.max(bins, d => d.length)]); // Scale based on the maximum value in the bins
     
-     // SVG要素を追加する前に既存のSVG要素をクリア
-    d3.select(selector).selectAll("svg").remove();
+    // Clear any existing SVG elements before adding new ones
+    d3.select(drawingArea).selectAll("svg").remove();
 
-    // SVGを選択し、サイズを設定
-    const svg = d3.select(selector)
+    // Select the SVG and set its size
+    const svg = d3.select(drawingArea)
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
   
-    // 既存のビジュアライザー要素をクリア
-    svg.selectAll("*").remove();
+    // Clear any existing visualizer elements
+    d3.select(drawingArea).selectAll("svg").remove();
   
-    // ビンのデータを基にバーを作成し、SVGに追加
+    // Create bars based on the bin data and add them to the SVG
     svg.selectAll("rect")
         .data(bins)
         .enter()
         .append("rect")
         .attr("x", d => x(d.x0) + 1)
         .attr("transform", d => `translate(0,${y(d.length)})`)
-        .attr("width", d => Math.max(0, x(d.x1) - x(d.x0) - 1)) // 最小の幅を0にすることで負の幅を防ぐ
+        .attr("width", d => Math.max(0, x(d.x1) - x(d.x0) - 1)) // Prevent negative widths by ensuring a minimum width of 0
         .attr("height", d => height - y(d.length))
         .style("fill", "#69b3a2");
   
-    // X軸をSVGに追加
+    // Add the x-axis to the SVG
     svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x));
   
-    // Y軸をSVGに追加
+    // Add the y-axis to the SVG
     svg.append("g")
         .call(d3.axisLeft(y));
-  }
+}
+
   
 
   $('#clearStorage').click(function() {
