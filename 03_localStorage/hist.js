@@ -5,7 +5,7 @@ $('#generate').click(function() {
 
     $('#uniformHistogramA').empty();
     $('#uniformHistogramB').empty();
-        $('#normalHistogramA').empty();
+    $('#normalHistogramA').empty();
     $('#normalHistogramB').empty();
 
     // Arrays retrieved from localStorage or created as new arrays
