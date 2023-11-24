@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>君だけのオリジナル英単語帳</title>
-    <!-- <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,101 +19,15 @@
         </div>
 
         <button id="send">Send</button>
+        <button id="delete-all">Delete All</button>
         <!-- style.cssに "overflow: auto;"を書いてみましょう！※最後に -->
         <div id="output"></div>
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-        import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
-            from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "API_KEY",
-            authDomain: "DOMAIN",
-            projectId: "ID",
-            storageBucket: "Bucket",
-            messagingSenderId: "ID",
-            appId: "APP_ID"
-            };
-        
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app); //RealtimeDBに接続
-        // const dbRef;
-        
-        $('#send').on('click', async function() {
-            const vocab = $('#vocab').val();
-
-            // wordの中身を確認
-            console.log(vocab, 'content of vocab');
-            
-            let data;
-            // APIにPOSTリクエストを送信
-            try {
-                const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/' + vocab
-                const response = await fetch(url);
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                data = await response.json();
-                // 単語が存在しない場合はサクセスでエラーなしなので、その場合は登録させない処理
-                console.log('Success:', data);
-            } catch (error) {
-                console.error('Error:', error);
-                return;
-            }
-
-            const spelling = data[0].word;
-            const phoneticsText = data[0].phonetics[0]?.text || 'Not available';
-            // const origin = data[0].origin || 'Not available';
-
-            let allDefinitions = [];
-            data[0].meanings.forEach(meaning => {
-                meaning.definitions.forEach(def => {
-                allDefinitions.push({
-                    definition: def.definition,
-                    example: def.example || 'Not available',
-                    synonyms: def.synonyms || [],
-                    antonyms: def.antonyms || []
-                });
-                });
-            });
-
-            let dbRef = ref(db, vocab); //RealtimeDB内の"list"を使う
-
-            // Firebaseデータベースにデータを登録
-            const msg = {
-                vocab: spelling,
-                phonetic: phoneticsText,
-                // origin: origin,
-                def: allDefinitions
-            };
-            console.log('msg', msg)
-
-            const newPostRef = push(dbRef);
-            await set(newPostRef, msg);
-        });
-
-        onChildAdded(dbRef, function (data) {
-            const msg = data.val();
-            const key = data.key;
-
-            let html = `
-                <div class=${key}>
-                    <p>${msg.word}</p>
-                </div>  `
-
-            // 画面に表示するために埋め込みます
-            $('#output').append(html)
-
-        })
-
-    </script>
+    <script type="text/javascript" src="./js/config.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
