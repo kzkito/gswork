@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <button id="genScript">長文を生成する</button>
+    <div class="container">
+        <div class="section content">
+            <div class="section-header">Content</div>
+            <p id="content"></p>
+        </div>
+        <div class="section questions">
+            <div class="section-header">Questions</div>
+            <ul id="questions"></ul>
+        </div>
+        <div class="section answer-options">
+            <div class="section-header">Answer Options</div>
+            <div id="answerOptions"></div>
+        </div>
+        <div class="section answers">
+            <div class="section-header">Answers</div>
+            <ul id="answers"></ul>
+        </div>
+    </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script type="text/javascript" src="./js/config.js"></script>
 <script type="module" src="./js/main.js"></script>
 </html>
