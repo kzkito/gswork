@@ -1,0 +1,358 @@
+/* ここから下に記載していく */
+#Aboutus {
+    padding-top: 155px;
+    margin-top:-125px;
+}
+#Offer {
+    padding-top: 155px;
+    margin-top:-125px;
+}
+#Resources {
+    padding-top: 155px;
+    margin-top:-125px;
+}
+#FAQ {
+    padding-top: 155px;
+    margin-top:-125px;
+}
+#Contact  {
+    padding-top: 155px;
+    margin-top:-125px;
+}
+/* hedaerのHeight分125px下げる　＋　見やすさのために30px下げる */
+
+/*  ここまでリンク用タグ、id指定であることに注意 */
+a {
+    text-decoration: none;
+    /* font-size: 100px; */
+}
+img {
+    /* object-fit: fill; */
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.title {
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #2f9165;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 60px;*/
+    padding-bottom: 20px; 
+}
+h1 {
+    font-size: 50px;
+    color: #2f9165;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+h2, h3 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text {
+    /* Easy to read, distinct look, web-safe */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* De-dacto standard of font size is clealy 16px, but we expect some elderly people will visit our website, so the font size of texts is set to be 17px. */
+    font-size: 17px;
+    line-height: 22px;
+    /* padding: 20px; */
+}
+sup {
+    vertical-align: super;
+    font-size: 12px;
+}
+.bordertop1px {
+    border-top: 1px solid #000;
+}
+
+.paddingtop30 {
+    padding-top: 30px;
+}
+.paddingtop20 {
+    padding-top: 20px;
+}
+
+.margintop140 {
+    margin-top: 140px;
+}
+.paddingbottom40 {
+    padding-bottom: 40px;
+}
+.paddingbottom30 {
+    padding-bottom: 30px;
+}
+.paddingbottom20 {
+    padding-bottom: 20px;
+}
+.textcentering {
+    text-align: center;
+}
+
+/* section {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+} */
+/* .contene-centerizer {
+    display: flex;
+    justify-content: center;
+} */
+.inputblock {
+    /* position: relative; */
+    margin-bottom: 25px;
+}
+
+
+/* この辺りから上がグローバル変数のノリ。範囲が複数に及ぶところ */
+.bodyInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding-top: 125px; */
+}
+header {
+    width: 100%;
+    height: 125px;
+    background: #2f9165;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+.headerInner {
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.headerLogo {
+    height: 85%;
+    /* max-width: 20%; */
+    padding-left: 10px;
+    /* object-fit: contain; */
+}
+.headerNav{
+    margin-left: auto;
+  }
+.headerNavGroup{
+    display: flex;
+    justify-content: end;
+}
+.headerNavItem {
+    font-size: 25px;
+    margin: 50px 25px 50px 25px;
+    color: white;
+    text-decoration: none;
+}
+.headerNavItemList {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.mainLogo {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* max-height: 400px; */
+    /* width: 100%; */
+    padding-top: 125px;
+}
+.mainLogoSlogan {
+    /* align-items: end;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%; */
+}
+/* .mainLogoSloganWrapper {
+    /* padding: 15px; 
+} */
+.mainLogoPic {
+    /* width: 50%; */
+}
+.mainContent {
+    max-width: 100%;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 0 auto; */
+}
+.mainContentAboutus {
+    /* display: flex;
+    flex-direction: column; */
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.mainContentService {
+    width: 100%;
+    /* margin: auto; */
+}
+.mainContentServicePricetable {
+    border-spacing: 0;
+    width: 50%;
+    /* border-bottom: 2px; */
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: auto; */
+}
+    th {
+    border-bottom: 2px solid black;
+    font-size: 28px;
+    /* text-align: left;    */
+    }
+    td{
+    /* border: none; */
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+.mainContentResourceContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.mainContentResourceContainerInside {
+    width: 25%;
+    padding: 15px;
+}
+.mainContentResourceContainerInside:hover {
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.mainContentResourceContainerExplain {
+    font-size: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.mainContentFaq {
+    width: 100%;
+}
+
+/* 以下アコーディオンメニュー */
+
+.accordion-003 {
+    /* max-width: 500px; */
+    margin-bottom: 7px;
+    border-bottom: 2px solid #d6dde3;
+}
+
+.accordion-003 summary {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #333333;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.accordion-003 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-003 summary::before,
+.accordion-003 summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #333333b3;
+    content: '';
+}
+
+.accordion-003 summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.accordion-003 summary::after {
+    transition: rotate .3s;
+}
+
+.accordion-003[open] summary::after {
+    rotate: 90deg;
+}
+
+.accordion-003 p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-003[open] p {
+    transform: none;
+    opacity: 1;
+}
+
+/* 以上アコーディオンメニュー */
+
+
+.maintContentContact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.mainContentContactSayhello {
+    width: 50%;
+}
+.mainContentContactSayhelloButton {
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid hsla(136, 98%, 16%, 0.967);
+	background: hsla(136, 98%, 16%, 0.967);
+	color: #fff;
+	transition: 0.5s;
+}
+.mainContentContactSayhelloButton:hover {
+	color: hsla(136, 98%, 16%, 0.967);
+	background: #fff;
+}
+
+input {
+    width: 100%;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    /* outline: none; */
+}
+.mainContentContactInfo {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.mainContentContactInfoLogo {
+    width: 80%;
+    margin: 0 auto;
+}
+footer {
+    background: #2f9165;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

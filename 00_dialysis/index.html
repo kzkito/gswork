@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tokyo Dialysis Center</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- 最初の設定は終わっています　必要な方は触ってください -->
+  <body>
+    <!-- この中に記述していく -->
+    <!-- ここから下にコードを書く -->
+    
+    <header class="header">
+      <div class="headerInner">
+        <!-- logo -->
+        <div class="headerLogo">
+          <img 
+          src="./img/shironuki.png"
+          alt="Our logo Tokyo Dialysis Center">
+        </div>
+        <!-- nav -->
+        <nav class="headerNav">
+          <!-- ul>(a>li)*4 -->
+          <ul class="headerNavGroup">
+            <li class="headerNavItemList"><a class="headerNavItem" href="#Aboutus">About us</a></li>
+            <li class="headerNavItemList"><a class="headerNavItem" href="#Offer">Offer</a></li>
+            <li class="headerNavItemList"><a class="headerNavItem" href="#Resources">Resources</a></li>
+            <li class="headerNavItemList"><a class="headerNavItem" href="#FAQ">FAQ</a></li>
+            <li class="headerNavItemList"><a class="headerNavItem" href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="bodyInner">
+      <main>
+        <div class="mainInner">
+          <div class="mainLogo paddingbottom30">
+            
+            <div class="mainLogoPic">
+              <img src="./img/titleimg.png" alt="">
+            </div>
+            <div class="mainLogoSlogan paddingtop20">
+              <div class="mainLogoSloganWrapper">
+                <h1 class="Ourvalue">You explore Japan,&nbspWe care for your dialysis</h1>
+              </div>
+            </div>
+          </div>
+          <div class="mainContent">
+            <section id="Aboutus" class="mainContentAboutus paddingbottom30 ">
+              <p class="title">About us</p>
+              <p class="text paddingbottom40" >We, Tokyo Dialysis Center, specialize in simplifying dialysis appointment reservations for travelers exploring Japan.</p>
+              <p class="text  paddingbottom40">Our dedicated team works with top-quality dialysis facilities across the country to secure convenient appointments that align with your travel plans, leaving you free to savor Japan's beauty and culture. </p>
+              <p class="text">With Tokyo Dialysis Center, you can trust that your dialysis needs are expertly handled, allowing you to create unforgettable memories while in Japan.</p>
+            </section>
+            <section id="Offer" class="mainContentService paddingbottom30">
+              <p class="title ">Offer</p>
+              <p class="text paddingbottom40 textcentering">Our offers is simple, and the price are clear.</p>
+              <!-- report USD149 appointment 199USD-->
+              <table class="mainContentServicePricetable">
+
+                <tr>
+                  <th >Offer</th>
+                  <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                  <th>Price</th>
+                </tr>
+                <tr>
+                  <td class="text">&nbsp&nbsp&nbspReporting available hospital(s)</td>
+                  <td>&nbsp&nbsp&nbsp</td>
+                  <td class="text">&nbsp&nbspUSD199&nbsp&nbsp</td>
+                </tr>
+                <tr>
+                  <td class="text">&nbsp&nbsp&nbspReserving session appointments</td>
+                  <td>&nbsp&nbsp&nbsp</td>
+                  <td class="text">&nbsp&nbspUSD249&nbsp&nbsp</td>
+                </tr>
+              </table>
+              <h2>Report Service</h2>
+              <p class="text paddingbottom20">We will provide a list of several available hospitals in the area where you plan to stay, attaching a brief report. The report will include interior photos of the hospital, a their price list of dialysis and various options, and instructions on how to access the cite from major train stations. If you are going to stay in a major city, we can typically find from at least five hospitals. However, if you are in a suburban area, there may be only one selected option. If we cannot pick one hospital, we will refund the fee.</p>
+              <h3>Reserve Service</h3>
+              <p class="text">The reserve service includes reserving appointment of sessions at a single hospital. For example, if you plan to undergo dialysis three times at the same hospital, please purchase one reserve service. If you plan to have two sessions at one hospital and other sessions at another hospital, please purchase two reserve services.</p>
+            </section>
+            <section id="Resources" class="mainContentResource paddingbottom30">
+              <p class="title">Resources</p>
+              <!-- some posts -->
+              <!-- list of hospital -->
+              <!-- Report sample -->
+              <!-- our stuff -->
+              <div class="mainContentResourceContainer">
+                <div class="mainContentResourceContainerInside">
+                  <div class="mainContentResourceContainerExplain">Sample Report</div>
+                  <div class="mainContentResourceContainerInsidePic">
+                    <img src="./img/report.webp" alt="">
+                  </div>
+                </div>
+                
+                <div class="mainContentResourceContainerInside">
+                  <div class="mainContentResourceContainerExplain">Featured Hospital</div>
+                  <div class="mainContentResourceContainerInsidePic">
+                    <img src="./img/hosp.webp" alt="">
+                  </div>
+                </div>
+
+                <div class="mainContentResourceContainerInside">
+                  <div class="mainContentResourceContainerExplain">Our Squad</div>
+                  <div class="mainContentResourceContainerInsidePic">
+                    <img src="./img/squad.webp" alt="">
+                  </div>
+
+                </div>
+              </div>
+            </section>
+            <section id="FAQ" class="mainContentFaq paddingbottom30">
+              <p class="title">FAQ</p>
+              <!-- Qにカーソルを合わせるとAが出てくる -->
+              <div class="mainContentFaqList">
+                <details class="accordion-003">
+                  <summary>How much does a single dialysis session cost?</summary>
+                  <p class="text">Overall, it depends on the hospital. It's typically between JPY40,000 to 50,000, roughly around USD300.</p>
+                </details>
+                <details class="accordion-003">
+                  <summary>Is dialysis safe in Japan?</summary>
+                  <p class="text">Yes, it is very safe. According to a 2012 report, when Japan is considered as 1 for the risk of mortality among chronic dialysis patients, Europe reports a rate of 2.4 and the United States reports a rate of 2.8<sup>1)</sup>. Additionally, the incidence of all complications is much lower compared to other countries<sup>2)</sup>.</p>
+                  <p class="text">1)Robinson BM, Bieber B, Pisoni RL, et al: Dialvsis Outcomes and Practice Patterns Study (DOPPS): its strengths, limitations, and role in informing practices and policies. Clin I Am Soc Nephrol 7: 1897-905, 2012</p>
+                  <p class="text">2)Robinson BM, Akizawa I, Jager KJ, et al: Factors affecting outcomes in patients reaching end-stage kidney disease worldwide: differences in access to renal replacement therapy, modality use, and haemodialysis practices. Lancet 388: 294-306, 2016
+                  </p>
+                </details>
+                <details class="accordion-003">
+                  <summary>I would love to use your service! What do I need to prepare?</summary>
+                  <p class="text">If you are using the Report service, please let me know the city where you plan to stay. For example, if it's Tokyo, we would need to know the specific areas like Asakusa or Shibuya. If you have the address of your intended hotel, please provide that as well!</p>
+                  <p class="text">For the Reserve service, it varies by hospital, but generally, we will need your recent dialysis records, any comorbidities other than kidney disease, other necessary dialysis-related values, and comments from your primary physician. Each hospital may have specific forms to fill out, so please reach out to us initially for further details.</p>
+                </details>
+              </div>
+            </section>
+            <section id="Contact" class="maintContentContact paddingbottom20 ">
+              <div class="mainContentContactSayhello">
+                <p class="title">Say hello to us</p>
+                <div class="mainContentSayhelloInputblocks">
+                  <div class="inputblock">
+                    <p class="text">Name</p>
+                    <input type="text" name="Name" placeholder="How can we adress you...">
+                  </div>
+                  <div class="inputblock">
+                    <p class="text">Email</p>
+                    <input type="text" name="Email" placeholder="Tell us your mail account...">
+                  </div>
+                  <div class="inputblock">
+                    <p class="text">Tell us how we can help you</p>
+                    <input type="text" name="howwecanhelpyou" placeholder="Could we help you...">
+                  </div>
+                </div>
+                <div >
+                  <a href="" class="mainContentContactSayhelloButton title">Send</a>
+                </div>
+              </div>
+              <div class="mainContentContactInfo">
+    
+                <p class="title">Contact Info</p>
+                <div class="mainContentContactInfoLogo"><img src="./img/Logo_Lowreso.png" height= alt=""></div>
+                <p class="text">Tokyo Dialysis Center</p>
+                <p class="text">1-1, Marunouchi</p>
+                <p class="text">Chiyoda, Tokyo</p>
+                <p class="text">100-0001</p>
+                <p class="text">Japan</p>
+                <p class="text"></p>
+                <p class="text"></p>
+              </div>
+            </section>
+          </div>
+          
+        </div>
+      </main>
+     
+    </div>
+    <footer class="margintop140">
+        <p>Copyrights 2023 Tokyo Dialysis Center. Inc All Rights Reserved.</p>
+    </footer>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+
+</html>

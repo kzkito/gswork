@@ -1,0 +1,94 @@
+#finalResult {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+body {
+    /* width: 1200Px; */
+
+    background: black;
+    color: white;
+}
+#overlay {
+    display: flex;;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.kaiji {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.funai {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+}
+.results {
+    width: 400px;
+}
+#finalResultLeft {
+    font-size: 50px;
+    font-weight: bold;
+}
+#finalResultRight {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+#kaijihand {
+    padding-right: 15px
+}
+.playerName {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+    /* margin-bottom: auto; */
+}
+.hands {
+    /* margin-left: auto; */
+    display: flex;
+    
+}
+.facepic {
+    display: flex;
+    flex-direction: column;
+}
+.handwrapper {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+.marginleftauto {
+    margin-left: auto;
+}
+img {
+    padding-bottom: 10px;
+}
+.counts {
+    font-size: 25px;
+}
+#funaihand {
+    place-content: 15px;
+}
+.centerhand {
+    display: flex;
+}

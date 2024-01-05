@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>限定ジャンケン</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="overlay">
+        <div class="kaiji">
+            <div class="facepic">
+                <img src="./img/Kaiji.jpeg" width="400" alt="">
+                <p class="playerName" id="kaijiscore">カイジ</p>
+            </div>
+
+            <div class="hands">
+                <div class="handwrapper">
+                    <img src="./img/gu.jpg" width="200"  alt="">
+                    <button onclick="play('グー')">グーを出す</button>
+                    <p class="counts" id="handsCountPlayerMessageKaijiGu">残り枚数 4</p>
+                </div>
+                <div class="handwrapper">
+                    <img src="./img/choki.jpg" width="200" alt="">
+                    <button onclick="play('チョキ')">チョキを出す</button>
+                    <p class="counts" id="handsCountPlayerMessageKaijiChoki">残り枚数 4</p>
+                </div>
+                <div class="handwrapper">
+                    <img src="./img/pa.jpg" width="200" alt="">
+                    <button onclick="play('パー')">パーを出す</button>
+                    <p class="counts" id="handsCountPlayerMessageKaijiPa">残り枚数 4</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="results" >
+                <div id="finalResultLeft">カイジ　手</div>
+            </div>
+                <div class="centerhand">
+                    <div><img id="kaijihand" src="./img/cardback.png" height="300" alt=""></div>
+                    <div><img id="funaihand" src="./img/cardback.png" height="300" alt=""></div>
+                </div>    
+            <div class="results">
+                <div id="finalResultRight">船井　手</div>
+            </div>
+        </div>
+        <div class="funai">
+            <div class="hands">
+                <div class="handwrapper">
+                    <img src="./img/gu.jpg" width="200" alt="">
+                    <p class="counts" id="handsCountComputerMessageFunaiGu">残り枚数 4</p>
+                </div>
+                <div class="handwrapper">
+                    <img src="./img/choki.jpg" width="200" alt="">
+                    <p class="counts" id="handsCountComputerMessageFunaiChoki">残り枚数 4</p>
+                </div>
+                <div class="handwrapper">
+                    <img src="./img/pa.jpg" width="200" alt="">
+                    <p class="counts" id="handsCountComputerMessageFunaiPa">残り枚数 4</p>
+                </div>
+            </div>
+            <div class="facepic">
+                <img src="./img/funai.jpeg" width="300" alt="">
+                <p class="playerName" id="funaiscore">船井</p>
+            </div>
+        </div>    
+    </div>
+
+    <!--カイジの手を選んでゲームが始まる -->
+    <!-- <p id="resultMessage">勝敗</p> -->
+    <!-- <p id="score">スコア</p> -->
+    <p id="finalResult"></p>
+
+    
+    <!-- <p id="message">出せない</p> -->
+
+<script src="./index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
