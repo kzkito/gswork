@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 # from django.contrib.auth import logout
 from django.urls import reverse_lazy
@@ -5,26 +6,26 @@ from django.views.generic import ListView, DetailView, CreateView, DeleteView, U
 from .models import Book
 
 # Create your views here.
-class ListBookView(ListView):
+class ListBookView(LoginRequiredMixin, ListView):
     template_name = 'book/book_list.html'
     model = Book
 
-class DetailBookView(DetailView):
+class DetailBookView(LoginRequiredMixin, DetailView):
     template_name = 'book/book_detail.html'
     model = Book
 
-class CreateBookView(CreateView):
+class CreateBookView(LoginRequiredMixin, CreateView):
     template_name = 'book/book_create.html'
     model = Book
     fields = ('title', 'text', 'category')
     success_url = reverse_lazy('list-book')
     
-class DeleteBookView(DeleteView):
+class DeleteBookView(LoginRequiredMixin, DeleteView):
     template_name = 'book/book_delete.html'
     model = Book
     success_url = reverse_lazy('list-book')
     
-class UpdateBookView(UpdateView):
+class UpdateBookView(LoginRequiredMixin, UpdateView):
     template_name = 'book/book_update.html'
     fields = ('title', 'text', 'category')
     success_url = reverse_lazy('list-book')
